@@ -4,9 +4,13 @@ body {
 
 .section2,
 .section4,
-.section5 {
+.section5,
+.section6{
   font-family: "Inter";
   color: #300B60;
+}
+.section6{
+  color: #4A2182;
 }
 
 .fa-check {
