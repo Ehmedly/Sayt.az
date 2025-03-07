@@ -1,22 +1,41 @@
-body{
+body {
   font-family: "Manrope";
 }
+
 .section2,
-.section4{
+.section4,
+.section5 {
   font-family: "Inter";
   color: #300B60;
 }
-.fa-check{
+
+.fa-check {
   padding-right: 16px;
   color: rgb(52, 172, 52);
 }
-.section4 li{
+
+.section4 li {
   font-size: 14px;
   margin: 15px 0;
+  font-weight: 300;
 }
-.section4 i{
+
+.section4 b {
+  font-weight: 700;
+}
+
+.section4 i {
   font-size: 1.2rem;
 }
-.boyuk{
-  padding: 1px 0;
+
+@media(min-width:1024px) {
+  .card2 {
+    transform: translateY(5px);
+  }
+  .section4 .left{
+    border-right: none;
+  }
+  .section4 .right{
+    border-left: none;
+  }
 }
