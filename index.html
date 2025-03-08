@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
     <div class="all-navbar py-[10px] md:py-[24px] px-[28px] font-[650] fixed w-[100%] top-0 left-0 z-20 bg-white">
       <nav class="flex items-center justify-between gap-[10px] text-[1rem]">
@@ -87,7 +88,6 @@
       </a>
     </div>
   </header>
-
   <main>
     <!-- SECTION 2 -->
     <div
@@ -422,9 +422,247 @@
         </div>
       </div>
     </div>
+    <!-- SECTION 7 -->
+    <div class="section7 py-[100px] flex flex-col gap-[50px]">
+      <div class="header w-[70%] lg:w-[50%] mx-auto text-center">
+        <h4 class="font-bold text-[32px] text-center">Komandamızın Pərdə Arxası</h4>
+        <p class="text-[20px] text-[#4A2182]">Komandamızla Tanış Olaq</p>
+      </div>
+      <div id="sevenCards" class="flex flex-wrap justify-evenly gap-[15px] w-[75%] mx-auto">
+      </div>
+    </div>
+    <!-- SECTION 8 -->
+    <div class="section8 flex flex-col py-[20px] w-[88%] mx-auto gap-[35px]">
+      <div class="header text-center">
+        <h5 class="md:text-[32px] text-[22px] font-[650]">Son İşlərimiz</h5>
+        <p class="md:text-[20px] text-[16px] text-[#4A2182]">Paylaşmaqdan Qürur Duyuruq</p>
+      </div>
+      <div id="eightCards" class="cards flex flex-wrap justify-center gap-[20px]">
+      </div>
+      <!-- PAGINATION -->
+      <div class="flex justify-center space-x-1.5 dark:text-gray-800 py-[100px]">
+        <button title="previous" type="button"
+          class="inline-flex items-center justify-center w-11 h-10 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button type="button" title="Page 1"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 dark:text-violet-600 dark:border-violet-600">1</button>
+        <button type="button"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+          title="Page 2">2</button>
+        <button type="button"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+          title="Page 3">3</button>
+        <button type="button"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+          title="Page 4">4</button>
+        <button type="button"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+          title="Page 5">5</button>
+        <button title="next" type="button"
+          class="inline-flex items-center justify-center w-11 h-10 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- SECTION 9 -->
+    <div class="section9 flex flex-col pb-[30px] gap-[40px]">
+      <div class="header flex flex-col items-center">
+        <h5 class="md:text-[32px] text-[24px] font-[650]">Müştərilərimizin Rəyləri</h5>
+        <p class="md:text-[20px] text-[16px] font-[550]">Müştərilərin fikirləri</p>
+      </div>
+      <div class="slider">
+        <swiper-container id="commentsSwiper" class="mySwiper border border-[2px] rounded-[12px]" keyboard="true"
+          space-between="30" pagination="true" pagination-clickable="true" navigation="true">
+        </swiper-container>
+      </div>
+    </div>
+    <!-- SECTION 10 -->
+    <div class="section10 w-[90%] xl:w-[85%] mt-[150px] my-[50px] mx-auto items-center flex flex-col gap-[20px]">
+      <div class="header flex items-center flex-col gap-[5px]">
+        <h6 class="text-[32px] font-[650]">Bloqumuza daxil olun</h6>
+        <span class="text-[16px] text-[#4A2182]">
+          Vebin İnkişafı, Dizaynı və Onlayn Strategiyaları ilə bağlı maraqlı məqalələri kəşf edin
+        </span>
+      </div>
+      <div class="cards flex flex-wrap gap-[12px] justify-center  w-full">
+        <div
+          class="card w-[80%] sm:w-[55%] md:w-[45%] xl:w-[32%] p-[8px] gap-[30px] flex flex-col items-center rounded-[8px] border border-[2px] border-[#A271F2] hover:border-[#732BE4] hover:shadow-[0px_12px_10px_-10px_rgba(0,0,0,0.3)] transition duration-300 cursor-pointer sm:min-w-[400px]">
+          <img class="oject-contain h-[222px]" src="Images/Images_blog/ugurlu.jpg" alt="">
+          <p class="text-[20px] text-[#334155] font-[520] min-h-fit md:min-h-[56px]">
+            Uğurlu biznes üçün hansı veb trendləri izləməlisən?
+          </p>
+          <div class="flex flex-wrap items-start w-full gap-[8px]">
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">Feb 27, 2025</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">webdesign</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">marketinq</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">sayt</a>
+          </div>
+        </div>
+        <div
+          class="card w-[80%] sm:w-[55%] md:w-[45%] xl:w-[32%] p-[8px] gap-[30px] flex flex-col items-center rounded-[8px] border border-[2px] border-[#A271F2] hover:border-[#732BE4] hover:shadow-[0px_12px_10px_-10px_rgba(0,0,0,0.3)] transition duration-300 cursor-pointer sm:min-w-[400px]">
+          <img class="oject-contain h-[222px]" src="Images/Images_blog/deep.jpg" alt="">
+          <p class="text-[20px] text-[#334155] font-[520] min-h-fit md:min-h-[56px]">
+            DeepSeek AI: Yeni Nəsil Süni İntellekt Aləti
+          </p>
+          <div class="flex flex-wrap items-start w-full gap-[8px]">
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">Feb 27, 2025</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">webdesign</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">marketinq</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">sayt</a>
+          </div>
+        </div>
+        <div
+          class="card w-[80%] sm:w-[55%] md:w-[45%] xl:w-[32%] p-[8px] gap-[30px] flex flex-col items-center rounded-[8px] border border-[2px] border-[#A271F2] hover:border-[#732BE4] hover:shadow-[0px_12px_10px_-10px_rgba(0,0,0,0.3)] transition duration-300 cursor-pointer sm:min-w-[400px]">
+          <img class="oject-contain h-[222px]" src="Images/Images_blog/2025.jpg" alt="">
+          <p class="text-[20px] text-[#334155] font-[520]  min-h-fit md:min-h-[56px]">2025-ci ildə Onlayn Biznesin
+            Trendləri</p>
+          <div class="flex flex-wrap items-start w-full gap-[8px]">
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">Feb 27, 2025</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">webdesign</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">marketinq</a>
+            <a class="bg-[#A271F2] px-[16px] py-[5px] rounded-[10px] hover:bg-[#732BE4] text-[1rem] text-white"
+              href="#">sayt</a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="text-[1rem] bg-[#A271F2] hover:bg-[#732BE4] text-white font-[530] rounded-[10px] w-[300px] sm:w-[450px] px-[25px] py-[10px] mt-[10px] md:mt-[50px]">
+        Bütün Bloqlar
+      </button>
+    </div>
+    <!-- SECTION 11 -->
+    <div class="section11 items-center flex flex-col gap-[10px] md:gap-[50px] p-[40px]">
+      <div class="header max-w-[690px] text-center flex flex-col gap-[8px]">
+        <h6 class="text-[24px] md:text-[32px] font-bold">
+          Videolarımızı Kəşf Edin
+        </h6>
+        <span class="text-[14px] md:text-[16px] text-[#4A2182]">
+          Kəşf Edin, Öyrənin və Uğur Qazanın
+        </span>
+        <p class="text-[14px] md:text-[16px] text-[#4A2182]">
+          Son nailiyyətlərimizi, media çıxışlarımızı və ətraflı təlimlərimizi izləmək üçün video kolleksiyamıza göz
+          atın.
+          İdeal veb saytınızı qurmaqda sizə necə kömək edə biləcəyimizi öyrənin və uğur hekayəmizdən ilham alın.
+        </p>
+      </div>
+      <div class="carousel-container">
+        <div class="slider-container">
+          <div class="navigation">
+            <button class="nav-btn prev-btn">&#10094;</button>
+            <button class="nav-btn next-btn">&#10095;</button>
+          </div>
+          <div class="slides">
+            <div class="slide" data-index="0">
+              <div class="video-container">
+                <div class="video-item">
+                  <iframe src="https://www.youtube.com/embed/videoID1" title="Domen nədir? Domen nə üçündür?"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                  <iframe src="https://www.youtube.com/embed/videoID2" title="Sayt.az-la biznesini önə çıxar"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="slide" data-index="1">
+              <div class="video-container">
+                <div class="video-item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq3V130Qikc?si=5KlRzqwNXYFpefXb"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq3V130Qikc?si=5KlRzqwNXYFpefXb"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <span class="pagination-dot active" data-index="0"></span>
+          <span class="pagination-dot" data-index="1"></span>
+        </div>
+      </div>
+    </div>
   </main>
-  <script>
-  </script>
+  <!-- FOOTER -->
+  <footer class="bg-[#FAF4FF] border border-t-[1px]">
+    <div class="pt-[80px] w-[1260px] mx-auto flex justify-between items-center">
+      <div class="left flex flex-col  gap-[32px] w-[46%] pb-[80px]">
+        <img class="w-[200px]" src="Images/saytaz.svg" alt="saytazLogo">
+        <p class="text-[14px] mb-[40px] max-w-[480px]">
+          Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.
+        </p>
+        <div class="flex flex-col gap-[16px]">
+          <p class="text-[16px] font-[700]">Bizi izləyin :</p>
+          <ul class="flex gap-[30px]">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right flex gap-[60px] w-[47%] pb-[80px]">
+        <div class="flex flex-col gap-[2rem]">
+          <p class="text-[30px] font-[650]">Hostinq & Domen</p>
+          <ul class="flex flex-col gap-[16px]">
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Domen</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Veb Hostinq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">VPS Hostinq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Server</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-[2rem]">
+          <p class="text-[32px] font-[700]">Şirkət</p>
+          <ul class="flex flex-col gap-[16px]">
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Haqqımızda</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Əlaqə</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Bloq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright py-[2rem] px-[130.4px] flex justify-between border border-t-[1px]">
+      <span>© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
+      <div class = "flex gap-[15px]">
+        <span><i class="text-[15px] fa-solid fa-phone"></i> +(99470) 330-00-04</span>
+        <span><i class="text-[15px] fa-regular fa-envelope"></i> support@sayt.az</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="team.js"></script>
+  <script src="works.js"></script>
+  <script src="comment.js"></script>
+  <script src="carusel.js"></script>
 </body>
-
 </html>
