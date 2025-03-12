@@ -1,6 +1,21 @@
 body {
   font-family: "Manrope";
 }
+/* DROPDOWN SCROLLER */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Light grey */
+  border-radius: 20px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9a63ce;
+  border-radius: 10px;
+}
+/* DROPDOWN SCROLLER */
+
 
 .carousel-container {
   max-width: 1200px;
