@@ -131,18 +131,45 @@ let works = [
   }
 ]
 let eightCards = document.getElementById("eightCards")
-
+let currentPage = 0
+printResult(1)
+ColorNumberButton(1)
 function PrintWorks(a) {
+  if (a.textContent.trim() == "<") {
+    if (currentPage > 1) currentPage--
+    ColorNumberButton(currentPage)
+    printResult(currentPage)
+  } else if (a.textContent.trim() == ">") {
+    if (currentPage < 5) currentPage++
+    ColorNumberButton(currentPage)
+    printResult(currentPage)
+  } else {
+    currentPage = parseInt(a.innerHTML)
+    ColorNumberButton(currentPage)
+    printResult(currentPage)
+  }
+}
+function printResult(result) {
+  let newData = ""
   works.forEach((work) => {
-    if (work.id > (a * 6 - 6) && work.id <= a * 6) {
-      eightCards.innerHTML +=
+    if (work.id > (result * 6 - 6) && work.id <= result * 6) {
+      newData +=
         `
-        <a href = "#" class="card w-[85%] sm:w-[75%] md:w-[48.5%] p-[24px] border border-[2px] border-[#E4D7FD] rounded-[30px] gap-[24px] flex flex-col">
-          <img src="${work.imgUrl}" class = "w-full xl:h-[380px] lg:h-[320px] md:h-[240px] h-[200px] object-contain rounded-[20px]">
-          <span class = "font-[550] text:[12px] md:text-[20px]">${work.work}</span>
-        </a>
-        `
+          <a href = "#" class="card w-[85%] sm:w-[75%] md:w-[48.5%] p-[24px] border border-[2px] border-[#E4D7FD] rounded-[30px] gap-[24px] flex flex-col">
+            <img src="${work.imgUrl}" class = "w-full xl:h-[380px] lg:h-[320px] md:h-[240px] h-[200px] object-contain rounded-[20px]">
+            <span class = "font-[550] text:[12px] md:text-[20px]">${work.work}</span>
+          </a>
+          `
     }
   })
+  eightCards.innerHTML = newData
+  document.getElementById("worksSection").scrollIntoView({ behavior: "smooth" });
 }
-PrintWorks(1)
+function ColorNumberButton(value) {
+  let buttons = document.querySelectorAll(".section8 button")
+  buttons.forEach(button => {
+    parseInt(button.innerHTML) == value
+      ? ((button.style.backgroundColor = 'blueviolet'), (button.style.color = 'white'))
+      : ((button.style.backgroundColor = 'white'), (button.style.color = 'black'))
+  })
+}

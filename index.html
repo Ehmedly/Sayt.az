@@ -24,25 +24,40 @@
       <nav class="flex items-center justify-between gap-[10px] text-[1rem]">
         <a href="#"><img class="h-[35px]" src="Images/saytaz.svg" alt="Logo"></a>
         <div class="navLinks hidden gap-[56px] lg:flex">
-          <a class="hover:text-[#752EE2]" href="#">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('VebDropItem')">
             Veb sayt
             <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="VebDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
           </a>
-          <a class="hover:text-[#752EE2]" href="#">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('DomenDropItem')">
             Domen
             <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="DomenDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
           </a>
-          <a class="hover:text-[#752EE2]" href="#">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('HostinqDropItem')">
             Hostinq
             <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="HostinqDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
           </a>
-          <a class="hover:text-[#752EE2]" href="calculator.html">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('XidDropItem')">
             Xidmətlər
             <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="XidDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
           </a>
-          <a class="hover:text-[#752EE2]" href="#">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('CompDropItem')">
             Şirkət
             <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="CompDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
           </a>
         </div>
         <div class="navRightPart w-fit flex items-center justify-between gap-[25px]">
@@ -72,11 +87,13 @@
       </nav>
     </div>
     <div class="headerMain h-[100vh] flex items-center justify-center gap-[30px] flex-col">
-      <h1 class="xl:w-[900px] mt-[60px] w-[95%] text-[2rem] md:text-[3rem] text-[#334155] font-[650] text-center">
+      <h1
+        class="xl:w-[900px] mt-[80px] sm:mt-[60px] w-[95%] text-[2rem] md:text-[3rem] text-[#334155] font-[650] text-center">
         Biznesinizi bizimlə rəqəmsal dünyada
-        <span class="relative inline-block text-blue-600">
+        <span class="relative inline-block text-blue-600 w-[160px] md:w-[250px] text-[1.75rem] md:text-[2.75rem]">
           daha asan
-          <img class="absolute top-0 left-0" src="Images/easier.svg" alt="Asan-image">
+          <img class="absolute top-[-13px] md:top-[-22px] left-0 w-[160px] md:w-[250px]" src="Images/easier.svg"
+            alt="Asan-image">
         </span>
         yoldan irəliyə apar!
       </h1>
@@ -264,18 +281,19 @@
         </div>
         <div class="right flex items-end">
           <div class="border rounded-[25px]">
-            <button class="rounded-[25px] text-[1rem] py-[15px] px-[40px] hover:bg-violet-400"
-              id="ayliqBtn">Aylıq</button>
-            <button class="rounded-[25px] text-[1rem] py-[15px] px-[40px] hover:bg-violet-400"
-              id="illikBtn">İllik</button>
+            <button class="rounded-[25px] text-[1rem] py-[15px] px-[40px] hover:cursor-pointer text-[#94A3B8]"
+              id="monthlyBtn">Aylıq</button>
+            <button class="rounded-[25px] text-[1rem] py-[15px] px-[40px] hover:cursor-pointer bg-[#A78BFA] text-white text-[#94A3B8]"
+              id="yearlyBtn">İllik</button>
           </div>
         </div>
       </div>
       <div class="cardsDiv py-[20px] flex flex-wrap items-center w-full gap-[30px] lg:gap-0 
-      justify-center lg:justify-between">
+  justify-center lg:justify-between">
         <div
           class="left card w-[95%] sm:w-[80%] md:w-[45%] lg:w-[32%] min-w-[275px] cursor-pointer border hover:border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF]">
-          <p class="text-[36px] p-[10px] py-[5px] font-bold">₼60<span class="text-[14px] font-[400]"> /il</span></p>
+          <p id="section4CardLeftp" class="text-[36px] p-[10px] py-[5px] font-bold">₼60<span
+              class="text-[14px] font-[400]"> /il</span></p>
           <ul class="p-[12px] bg-white rounded-[15px]">
             <h4 class="text-[24px] font-[680] pb-[15px]">Ekonomik</h4>
             <li><i class="fa-solid fa-check"></i><b>1</b> Domen</li>
@@ -299,7 +317,8 @@
           <span
             class="absolute right-[20px] rounded-[10px] top-[20px] text-[12px] font-bold bg-white py-[5px] px-[10px] text-[#845CC5]">ƏN
             POPULYAR</span>
-          <p class="text-[36px]  p-[10px] py-[5px] font-bold">₼120<span class="text-[14px] font-[400]"> /il</span></p>
+          <p id="section4CardCenterp" class="text-[36px]  p-[10px] py-[5px] font-bold">₼120<span
+              class="text-[14px] font-[400]"> /il</span></p>
           <ul class="p-[12px] bg-white rounded-[15px]">
             <h4 class="text-[24px] font-[680] pb-[17px]">Standart</h4>
             <li class="boyuk"><i class="fa-solid fa-check"></i><b>2</b> Domen</li>
@@ -320,7 +339,8 @@
         </div>
         <div
           class="right card w-[95%] sm:w-[80%] md:w-[45%] lg:w-[32%] min-w-[275px] cursor-pointer border hover:border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF]">
-          <p class="text-[36px] p-[10px] py-[5px] font-bold">₼240<span class="text-[14px] font-[400]"> /il</span></p>
+          <p id="section4CardRightp" class="text-[36px] p-[10px] py-[5px] font-bold">₼240<span
+              class="text-[14px] font-[400]"> /il</span></p>
           <ul class="p-[12px] bg-white rounded-[15px]">
             <h4 class="text-[24px] font-[680] pb-[15px]">Professional</h4>
             <li><i class="fa-solid fa-check"></i><b>5</b> Domen</li>
@@ -432,7 +452,7 @@
       </div>
     </div>
     <!-- SECTION 8 -->
-    <div class="section8 flex flex-col py-[20px] w-[88%] mx-auto gap-[35px]">
+    <div class="section8 flex flex-col py-[20px] w-[88%] mx-auto gap-[35px]" id = "worksSection">
       <div class="header text-center">
         <h5 class="md:text-[32px] text-[22px] font-[650]">Son İşlərimiz</h5>
         <p class="md:text-[20px] text-[16px] text-[#4A2182]">Paylaşmaqdan Qürur Duyuruq</p>
@@ -440,34 +460,28 @@
       <div id="eightCards" class="cards flex flex-wrap justify-center gap-[20px]">
       </div>
       <!-- PAGINATION -->
-      <div class="flex justify-center space-x-1.5 dark:text-gray-800 py-[100px]">
-        <button title="previous" type="button"
-          class="inline-flex items-center justify-center w-11 h-10 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-            stroke-linejoin="round" class="w-4">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
+      <div class="flex justify-center space-x-1.5 py-[30px] lg:py-[100px]">
+        <button  type="button" onclick = "PrintWorks(this)"
+          class="inline-flex items-center justify-center w-11 h-10 py-0 border rounded-md shadow-md ">
+          <
         </button>
-        <button type="button" title="Page 1"
-          class="inline-flex items-center justify-center w-10 h-10 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 dark:text-violet-600 dark:border-violet-600">1</button>
-        <button type="button"
+        <button   onclick = "PrintWorks(this)"
+          class="inline-flex items-center justify-center w-10 h-10 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 bg-white">1</button>
+        <button type="button" onclick = "PrintWorks(this)"
           class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
           title="Page 2">2</button>
-        <button type="button"
+        <button type="button" onclick = "PrintWorks(this)"
           class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
           title="Page 3">3</button>
-        <button type="button"
+        <button type="button" onclick = "PrintWorks(this)"
           class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
           title="Page 4">4</button>
-        <button type="button"
+        <button type="button" onclick = "PrintWorks(this)"
           class="inline-flex items-center justify-center w-10 h-10 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
           title="Page 5">5</button>
-        <button title="next" type="button"
+        <button title="next" type="button"  onclick = "PrintWorks(this)"
           class="inline-flex items-center justify-center w-11 h-10 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-            stroke-linejoin="round" class="w-4">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
+          >
         </button>
       </div>
     </div>
@@ -613,26 +627,27 @@
   </main>
   <!-- FOOTER -->
   <footer class="bg-[#FAF4FF] border border-t-[1px]">
-    <div class="pt-[80px] w-[1260px] mx-auto flex justify-between items-center">
-      <div class="left flex flex-col  gap-[32px] w-[46%] pb-[80px]">
+    <div class="pt-[80px] w-[95%] md:w-[83%] gap-[30px] mx-auto flex flex-wrap justify-between items-center">
+      <div class="left flex flex-col  gap-[32px] sm:w-[46%] w-full sm:min-w-[313px] md:pb-[80px]">
         <img class="w-[200px]" src="Images/saytaz.svg" alt="saytazLogo">
-        <p class="text-[14px] mb-[40px] max-w-[480px]">
+        <p class="text-[14px] mb-[15px] md:mb-[40px] max-w-[480px]">
           Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.
         </p>
         <div class="flex flex-col gap-[16px]">
           <p class="text-[16px] font-[700]">Bizi izləyin :</p>
-          <ul class="flex gap-[30px]">
-            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <ul class="flex gap-[24px] sm:w-full w-[70%] justify-between lg:justify-start">
+            <li><a href="#"><i class="fa-brands fa-facebook text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube text-[2rem] sm:text-[3rem]"></i></a></li>
           </ul>
         </div>
       </div>
-      <div class="right flex gap-[60px] w-[47%] pb-[80px]">
-        <div class="flex flex-col gap-[2rem]">
-          <p class="text-[30px] font-[650]">Hostinq & Domen</p>
+      <div
+        class="right flex gap-[60px] sm:min-w-[335px] flex-col sm:flex-row gap-[25px] w-full sm:w-[47%] md:pb-[80px] ">
+        <div class="flex flex-col gap-[1rem] sm:gap-[2rem] min-w-[200px]">
+          <p class="lg:text-[30px] md:text-[24px] text-[20px] font-[650]">Hostinq & Domen</p>
           <ul class="flex flex-col gap-[16px]">
             <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Domen</a></li>
             <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Veb Hostinq</a></li>
@@ -640,8 +655,8 @@
             <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Server</a></li>
           </ul>
         </div>
-        <div class="flex flex-col gap-[2rem]">
-          <p class="text-[32px] font-[700]">Şirkət</p>
+        <div class="flex flex-col gap-[1rem] sm:gap-[2rem] min-w-[110px]">
+          <p class="lg:text-[30px] md:text-[24px] text-[20px] font-[700]">Şirkət</p>
           <ul class="flex flex-col gap-[16px]">
             <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Haqqımızda</a></li>
             <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Əlaqə</a></li>
@@ -651,11 +666,11 @@
         </div>
       </div>
     </div>
-    <div class="copyright py-[2rem] px-[130.4px] flex justify-between border border-t-[1px]">
-      <span>© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
-      <div class = "flex gap-[15px]">
-        <span><i class="text-[15px] fa-solid fa-phone"></i> +(99470) 330-00-04</span>
-        <span><i class="text-[15px] fa-regular fa-envelope"></i> support@sayt.az</span>
+    <div class="copyright py-[2rem] gap-[15px] sm:gap-[0] flex flex-wrap justify-around border border-t-[1px]">
+      <span class="order-2">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
+      <div class="flex gap-[15px] flex-wrap order-1">
+        <span class="min-w-[180px]"><i class="text-[15px]  fa-solid fa-phone"></i> +(99470) 330-00-04</span>
+        <span class="min-w-[180px] "><i class="text-[15px] fa-regular fa-envelope"></i> support@sayt.az</span>
       </div>
     </div>
   </footer>
@@ -665,5 +680,8 @@
   <script src="comment.js"></script>
   <script src="carusel.js"></script>
   <script src="hideorshowdrop.js"></script>
+  <script src="navdata.js"></script>
+  <script src="yearlymonthly.js"></script>
 </body>
+
 </html>

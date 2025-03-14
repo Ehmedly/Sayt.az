@@ -131,7 +131,6 @@ footer{
   color: #4A2182;
   i{
     color: #A271F2;
-    font-size: 3rem;
     transition: .3s;
     &:hover{
       color: #4A2182;
@@ -139,11 +138,13 @@ footer{
   }
 }
 .section8 button {
-  color: white;
-  background-color: #A271F2;
+  color: gray;
+  background-color: white;
+  font-weight: 500;
 
   &:hover {
     background-color: #7129E4;
+    color: white;
   }
 }
 

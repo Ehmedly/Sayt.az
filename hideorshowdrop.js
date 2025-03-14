@@ -1,8 +1,16 @@
 function HideShow(dropIt) {
   let dropItem = document.getElementById(`${dropIt}`)
-  if (dropItem.style.display == "none" || dropItem.style.display == "")
-    dropItem.style.display = "flex"
-  else {
-    dropItem.style.display = "none"
-  }
+  dropCategories.forEach((item)=>{ //the array is in the navdata.js file
+    if(dropItem == item){
+      if (item.style.display == "none" || item.style.display == ""){
+        item.style.display = "flex"
+      }
+      else {
+        item.style.display = "none"
+      }
+    }
+    else{
+      item.style.display = "none"
+    }
+  })
 }

@@ -15,9 +15,78 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="calc.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header>
+    <div class="all-navbar py-[10px] md:py-[24px] px-[28px] font-[650] fixed w-[100%] top-0 left-0 z-20 bg-white">
+      <nav class="flex items-center justify-between gap-[10px] text-[1rem]">
+        <a href="#"><img class="h-[35px]" src="Images/saytaz.svg" alt="Logo"></a>
+        <div class="navLinks hidden gap-[56px] lg:flex">
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('VebDropItem')">
+            Veb sayt
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="VebDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
+          </a>
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('DomenDropItem')">
+            Domen
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="DomenDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
+          </a>
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('HostinqDropItem')">
+            Hostinq
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="HostinqDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
+          </a>
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('XidDropItem')">
+            Xidmətlər
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="XidDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
+          </a>
+          <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('CompDropItem')">
+            Şirkət
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+            <div id="CompDropItem"
+              class="absolute hidden flex-col top-[45px] left-[-150px] w-[405px] max-h-[500px] overflow-auto gap-[24px] py-[24px] pl-[32px] pr-[16px] bg-white border rounded-[10px]">
+            </div>
+          </a>
+        </div>
+        <div class="navRightPart w-fit flex items-center justify-between gap-[25px]">
+          <div class="currencyAndCountry flex items-center gap-[15px]">
+            <a href="#" class="text-[20px] font-bold flex items-center">
+              ₼
+              <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+            </a>
+            <a href="#" class="flex items-center text-[20px]">
+              <img class="w-[24px] " src="Images/flag.png" alt="flagAzerbaijan">
+              <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+            </a>
+          </div>
+          <div class="rightButtonsDiv flex items-center gap-[15px] hidden xl:flex">
+            <a class="px-[24px] py-[9px] border rounded-[10px] text-white bg-gradient-to-r from-[#742CE3] 
+            to-[#E1ADCB]" href="#">
+              Qiymət Təklifi Al
+            </a>
+            <button class="px-[24px] py-[9px] border rounded-[10px] text-[#A271F2] border-[#A271F2]">
+              Daxil olun
+            </button>
+          </div>
+          <i class="fa-solid fa-bars block xl:hidden text-[1.2rem]"></i>
+          <div class="hamburgerMenu hidden">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
   <div class="w-full bg-white pt-[92px] pb-[48px]">
     <div
       class="main w-[100%] md:w-[80%] [@media(max-width:840px)]:flex-col mx-auto gap-[1.5rem] flex justify-between relative pt-[24px] px-[8px] pb-[48px] bg-[#F5F5F5]">
@@ -39,7 +108,7 @@
               </div>
             </div>
             <div class="flex text-[16px] items-center flex-wrap justify-between mt-[16px] py-[8px] px-[16px]">
-              <p class = "[@media(max-width:469px)]:mb-[1rem]">Dizayn mürəkkəblik :</p>
+              <p class="[@media(max-width:469px)]:mb-[1rem]">Dizayn mürəkkəblik :</p>
               <div class="w-[60%] [@media(max-width:469px)]:w-[100%] flex flex-col items-center gap-[16px]">
                 <div class="flex justify-between w-full">
                   <p>Sadə</p>
@@ -359,28 +428,23 @@
       <div class="right [@media(max-width:840px)]:w-[100%] w-[32.5%] sticky top-[25px] flex flex-col  h-fit">
         <div class="p-[32px] flex flex-col gap-4 bg-white">
           <p class="text-[#1C2434]">Təklifiniz</p>
-          <div
-            class=" w-full flex justify-between flex-row flex-wrap text-[16px] text-[Inter]">
+          <div class=" w-full flex justify-between flex-row flex-wrap text-[16px] text-[Inter]">
             <p class="text-[#8B8B9A] font-[300]">Statik səhifələr :</p>
             <span id="sumStatic" class="text-[18px] text-[#A271F2] font-[600]">₼ 400</span>
           </div>
-          <div
-            class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
+          <div class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
             <p class="text-[#8B8B9A] font-[300]">Əlavələr:</p>
             <span id="sumAdditionals" class="text-[18px] text-[#A271F2] font-[600]">₼ 0</span>
           </div>
-          <div
-            class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
+          <div class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
             <p class="text-[#8B8B9A] font-[300]">SEO :</p>
             <span id="sumCeo" class="text-[18px] text-[#A271F2] font-[600]">₼ 0</span>
           </div>
-          <div
-            class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
+          <div class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
             <p class="text-[#8B8B9A] font-[300]">E-ticarət :</p>
             <span id="sumCommercial" class="text-[18px] text-[#A271F2] font-[600]">₼ 0</span>
           </div>
-          <div
-            class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
+          <div class=" w-full flex justify-between flex-row flex-wrap gap-1 text-[16px] text-[Inter]">
             <p class="text-[#8B8B9A] font-[300]">Logo dizaynı :</p>
             <span id="sumLogo" class="text-[18px] text-[#A271F2] font-[600]">₼ 0</span>
           </div>
@@ -403,16 +467,65 @@
       </div>
     </div>
   </div>
+  <footer class="bg-[#FAF4FF] border border-t-[1px]">
+    <div class="pt-[80px] w-[95%] md:w-[83%] gap-[30px] mx-auto flex flex-wrap justify-between items-center">
+      <div class="left flex flex-col  gap-[32px] sm:w-[46%] w-full sm:min-w-[313px] md:pb-[80px]">
+        <img class="w-[200px]" src="Images/saytaz.svg" alt="saytazLogo">
+        <p class="text-[14px] mb-[15px] md:mb-[40px] max-w-[480px]">
+          Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.
+        </p>
+        <div class="flex flex-col gap-[16px]">
+          <p class="text-[16px] font-[700]">Bizi izləyin :</p>
+          <ul class="flex gap-[24px] sm:w-full w-[70%] justify-between lg:justify-start">
+            <li><a href="#"><i class="fa-brands fa-facebook text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in text-[2rem] sm:text-[3rem]"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube text-[2rem] sm:text-[3rem]"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="right flex gap-[60px] sm:min-w-[335px] flex-col sm:flex-row gap-[25px] w-full sm:w-[47%] md:pb-[80px] ">
+        <div class="flex flex-col gap-[1rem] sm:gap-[2rem] min-w-[200px]">
+          <p class="lg:text-[30px] md:text-[24px] text-[20px] font-[650]">Hostinq & Domen</p>
+          <ul class="flex flex-col gap-[16px]">
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Domen</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Veb Hostinq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">VPS Hostinq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Server</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-[1rem] sm:gap-[2rem] min-w-[110px]">
+          <p class="lg:text-[30px] md:text-[24px] text-[20px] font-[700]">Şirkət</p>
+          <ul class="flex flex-col gap-[16px]">
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Haqqımızda</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Əlaqə</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Bloq</a></li>
+            <li><a class="text-[#4A2182] font-[550] text-[18px] hover:text-[#A271F2]" href="#">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright py-[2rem] gap-[15px] sm:gap-[0] flex flex-wrap justify-around border border-t-[1px]">
+      <span class="order-2">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
+      <div class="flex gap-[15px] flex-wrap order-1">
+        <span class="min-w-[180px]"><i class="text-[15px]  fa-solid fa-phone"></i> +(99470) 330-00-04</span>
+        <span class="min-w-[180px] "><i class="text-[15px] fa-regular fa-envelope"></i> support@sayt.az</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let total = 0
+    let calculatorTotalValue = document.getElementById("calculatorTotalValue")
+  </script>
   <script src="statikCalc.js"></script>
   <script src="additionalCalc.js"></script>
   <script src="optimizationCalc.js"></script>
   <script src="electronadds.js"></script>
   <script src="logocostcalculate.js"></script>
   <script src="hideorshowdrop.js"></script>
-  <script>
-    let total = 0
-    let calculatorTotalValue = document.getElementById("calculatorTotalValue")
-  </script>
+  <script src="navdata.js"></script>
 </body>
 
 </html>
