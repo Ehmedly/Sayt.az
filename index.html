@@ -62,13 +62,27 @@
         </div>
         <div class="navRightPart w-fit flex items-center justify-between gap-[25px]">
           <div class="currencyAndCountry flex items-center gap-[15px]">
-            <a href="#" class="text-[20px] font-bold flex items-center">
-              ₼
+            <a href="#" class="currency text-[20px] font-bold relative flex items-center">
+              <p id="manato" class="block">₼</p>
+              <p id="dollare" class="hidden">$</p>
               <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+              <div
+                class="currencyDrop p-[5px] hidden absolute top-[40px] left-0 flex flex-col border bg-white w-[120%] rounded">
+                <p class="text-[16px] block px-[8px] hover:bg-[#eee]" onclick="chooseCurrency(this)">₼</p>
+                <p class="text-[16px] block px-[8px] hover:bg-[#eee]" onclick="chooseCurrency(this)">$</p>
+              </div>
             </a>
-            <a href="#" class="flex items-center text-[20px]">
-              <img class="w-[24px] " src="Images/flag.png" alt="flagAzerbaijan">
+            <a href="#" class="country flex items-center relative text-[20px]">
+              <img class="w-[24px] block aze" src="Images/flag.png" alt="flagAzerbaijan">
+              <img class="w-[24px] hidden use" src="Images/usaflag.png" alt="flagUSA">
               <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+              <div
+                class="flagDrop hidden absolute top-[40px] left-0 flex flex-col items-center border bg-white w-[120%] rounded p-[5px]">
+                <img class="w-[24px] block py-[2px]" src="Images/flag.png" alt="flagAzerbaijan"
+                  onclick="chooseCountry('aze')">
+                <img class="w-[24px] block py-[2px]" src="Images/usaflag.png" alt="flagUSA"
+                  onclick="chooseCountry('use')">
+              </div>
             </a>
           </div>
           <div class="rightButtonsDiv flex items-center gap-[15px] hidden xl:flex">
@@ -83,7 +97,8 @@
           <div class="sidebar">
             <i class="fa-solid fa-bars xl:hidden block text-[1.2rem] hover:cursor-pointer"
               onclick="ShowHamburger()"></i>
-            <div class="hamburgerMenu w-full lg:hidden sm:w-[425px] hidden absolute right-0 top-0 bg-white  p-[24px] bg-white h-[100vh]">
+            <div
+              class="hamburgerMenu w-full lg:hidden sm:w-[425px] hidden absolute right-0 top-0 bg-white  p-[24px] bg-white h-[100vh]">
               <i class="fa-solid fa-xmark xl:hidden w-full block text-end text-[22px] hover:cursor-pointer"
                 onclick="ShowHamburger()"></i>
               <div class="navLinks1 flex flex-col gap-[30px]  p-[24px]">
@@ -310,16 +325,17 @@
             <input id="section3Input" oninput="CheckDomainNames(this.value)"
               class="pl-[20px] lg:w-[420px] ms:w-[85%] w-[150px] px-[5px] ms:px-[20px] py-[8px] ms:py-[12px] outline-none"
               type="text" placeholder="İstədiyiniz domen adını daxil edin">
-            <select class="text-[#300B60] px-[5px] ms:px-[20px] py-[8px] ms:py-[12px] outline-none max-h-[150px]">
-              <option class="text-[#300B60]" selected>.net.az</option>
-              <option class="text-[#300B60]">.biz.az</option>
-              <option class="text-[#300B60]">.info.az</option>
-              <option class="text-[#300B60]">.org.az</option>
+            <select class="text-[#300B60] px-[5px] ms:px-[20px] py-[8px] ms:py-[12px] outline-none max-h-[150px]"
+            id = "section3Select">
+              <option class="text-[#300B60]" selected>.net</option>
+              <option class="text-[#300B60]">.biz</option>
+              <option class="text-[#300B60]">.info</option>
+              <option class="text-[#300B60]">.org</option>
               <option class="text-[#300B60]">.ureb.az</option>
               <option class="text-[#300B60]">.sayt.az</option>
               <option class="text-[#300B60]">.site.az</option>
-              <option class="text-[#300B60]">.co.az</option>
-              <option class="text-[#300B60]">.com.az</option>
+              <option class="text-[#300B60]">.com</option>
+              <option class="text-[#300B60]">.az</option>
               <option class="text-[#300B60]">.de</option>
               <option class="text-[#300B60]">.ru</option>
               <option class="text-[#300B60]">.me</option>
@@ -327,7 +343,7 @@
               <option class="text-[#300B60]">.ws</option>
               <option class="text-[#300B60]">.in</option>
               <option class="text-[#300B60]">.us</option>
-              <option class="text-[#300B60]">.org</option>
+              <option class="text-[#300B60]">.net</option>
             </select>
             <button id="searchDomainBtn"
               class="text-[#300B60] bg-[#A171F1] rounded-[0_5px_5px_0] text-[white] px-[30px] ms:px-[20px] py-[12px] ms:py-[12px]">Axtar</button>
@@ -335,12 +351,12 @@
           <p id="myp" class="text-[14px] hidden px-[20px]"></p>
         </div>
         <div class="flex flex-wrap gap-[60px] justify-center">
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.az </span><br>₼40/il</a>
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.com</span> <br> ₼25/il</a>
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.net</span> <br> ₼38/il</a>
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.info</span><br>₼55/il</a>
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.biz</span> <br>₼30/il</a>
-          <a class="text-[#A171F1] text-[1rem]" href=""><span class="text-[24px] font-bold">.org</span> <br>₼35/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.az</span><br>₼40/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.com</span> <br> ₼25/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.net</span> <br> ₼38/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.info</span><br>₼55/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.biz</span> <br>₼30/il</a>
+          <a class="text-[#A171F1] text-[1rem]"><span class="hover:cursor-pointer text-[24px] font-bold" onclick = "chooseDomain(this)">.org</span> <br>₼35/il</a>
         </div>
       </div>
     </div>
@@ -364,7 +380,7 @@
       </div>
       <div class="cardsDiv py-[20px] flex flex-wrap items-center w-full gap-[30px] lg:gap-0 
   justify-center lg:justify-between">
-        <div
+        <div id = "leftCard" onclick="selectedCard4('leftCard')"
           class="left card w-[95%] sm:w-[80%] md:w-[45%] lg:w-[32%] min-w-[275px] cursor-pointer border hover:border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF]">
           <p id="section4CardLeftp" class="text-[36px] p-[10px] py-[5px] font-bold">₼60<span
               class="text-[14px] font-[400]"> /il</span></p>
@@ -386,8 +402,8 @@
             class="text-center w-[100%] rounded-[25px] text-[#845CC5] border border-[#845CC5] py-[10px]  mt-[15px] hover:bg-[#845CC5] hover:text-white">Sifariş
             et</button>
         </div>
-        <div
-          class="card2 relative min-w-[280.5px] w-[95%] sm:w-[80%] md:w-[45%] lg:w-[34%] cursor-pointer border border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF] shadow-[2px_12px_30px_rgba(132,92,197,0.8)]">
+        <div id = "centerCard" onclick="selectedCard4('centerCard')"
+          class="card2 center relative min-w-[280.5px] w-[95%] sm:w-[80%] md:w-[45%] lg:w-[34%] cursor-pointer border border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF] shadow-[2px_12px_30px_rgba(132,92,197,0.8)]">
           <span
             class="absolute right-[20px] rounded-[10px] top-[20px] text-[12px] font-bold bg-white py-[5px] px-[10px] text-[#845CC5]">ƏN
             POPULYAR</span>
@@ -411,7 +427,7 @@
             class="text-center w-[100%] rounded-[25px] text-[#845CC5] border border-[#845CC5] py-[10px]  mt-[15px] hover:bg-[#845CC5] hover:text-white">Sifariş
             et</button>
         </div>
-        <div
+        <div id = "rightCard" onclick="selectedCard4('rightCard')"
           class="right card w-[95%] sm:w-[80%] md:w-[45%] lg:w-[32%] min-w-[275px] cursor-pointer border hover:border-[#845CC5] border-[3px] rounded-[10px] px-[15px] py-[17px] bg-[#FAFBFF]">
           <p id="section4CardRightp" class="text-[36px] p-[10px] py-[5px] font-bold">₼240<span
               class="text-[14px] font-[400]"> /il</span></p>
@@ -783,6 +799,8 @@
   <script src="flagcurrencyfunctions.js"></script>
   <script src="hamburgerfunc.js"></script>
   <script src="sideData.js"></script>
+  <script src="section3addingdomain.js"></script>
+  <script src="section4.js"></script>
 </body>
 
 </html>
