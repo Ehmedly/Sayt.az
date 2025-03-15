@@ -137,6 +137,10 @@ footer{
     }
   }
 }
+.hamburgerMenu{
+  color: #300B60;
+  font-family: "Inter";
+}
 .section8 button {
   color: gray;
   background-color: white;

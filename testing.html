@@ -18,8 +18,89 @@
 </head>
 
 <body>
-  
-  <script></script>
+  <div class="all-navbar py-[10px] md:py-[24px] px-[28px] font-[650] fixed w-[100%] top-0 left-0 z-20 bg-white">
+    <nav class="flex items-center justify-between gap-[10px] text-[1rem]">
+      <a href="#"><img class="h-[35px]" src="Images/saytaz.svg" alt="Logo"></a>
+      <div class="navLinks hidden gap-[45px] lg:flex">
+        <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('VebDropItem')">
+          Veb sayt
+          <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+          <div id="VebDropItem"
+            class="absolute flex flex-col max-w-[405px] h-[500px] overflow-auto gap-[15px] py-[24px] pl-[0px] pr-[0px] bg-white">
+          </div>
+        </a>
+        <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('DomenDropItem')">
+          Domen
+          <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+          <div id="DomenDropItem"
+            class="absolute flex flex-col max-w-[405px] h-[500px] overflow-auto gap-[15px] py-[24px] pl-[0px] pr-[0px] bg-white">
+          </div>
+        </a>
+        <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('HostinqDropItem')">
+          Hostinq
+          <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+          <div id="HostinqDropItem"
+            class="absolute flex flex-col max-w-[405px] h-[500px] overflow-auto gap-[15px] py-[24px] pl-[0px] pr-[0px] bg-white">
+          </div>
+        </a>
+        <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('XidDropItem')">
+          Xidmətlər
+          <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+          <div id="XidDropItem"
+            class="absolute flex flex-col max-w-[405px] h-[500px] overflow-auto gap-[15px] py-[24px] pl-[0px] pr-[0px] bg-white">
+          </div>
+        </a>
+        <a class="hover:text-[#752EE2] relative cursor-pointer" onclick="HideShow('CompDropItem')">
+          Şirkət
+          <i class="fa-solid fa-chevron-down text-[13px] ml-[10px]"></i>
+          <div id="CompDropItem"
+            class="absolute flex flex-col max-w-[405px] h-[500px] overflow-auto gap-[15px] py-[24px] pl-[0px] pr-[0px] bg-white">
+          </div>
+        </a>
+      </div>
+      <div class="navRightPart w-fit flex items-center justify-between gap-[25px]">
+        <div class="currencyAndCountry flex items-center gap-[15px]">
+          <a href="#" class="currency text-[20px] font-bold relative flex items-center">
+            <p id="manato" class="block">₼</p>
+            <p id="dollare" class="hidden">$</p>
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+            <div
+              class="currencyDrop p-[5px] hidden absolute top-[40px] left-0 flex flex-col border bg-white w-[120%] rounded">
+              <p class="text-[16px] block px-[8px] hover:bg-[#eee]" onclick="chooseCurrency(this)">₼</p>
+              <p class="text-[16px] block px-[8px] hover:bg-[#eee]" onclick="chooseCurrency(this)">$</p>
+            </div>
+          </a>
+          <a href="#" class="country flex items-center relative text-[20px]">
+            <img class="w-[24px] block aze" src="Images/flag.png" alt="flagAzerbaijan">
+            <img class="w-[24px] hidden use" src="Images/usaflag.png" alt="flagUSA">
+            <i class="fa-solid fa-chevron-down text-[13px] ml-[15px]"></i>
+            <div
+              class="flagDrop hidden absolute top-[40px] left-0 flex flex-col items-center border bg-white w-[120%] rounded p-[5px]">
+              <img class="w-[24px] block py-[2px]" src="Images/flag.png" alt="flagAzerbaijan"
+                onclick="chooseCountry('aze')">
+              <img class="w-[24px] block py-[2px]" src="Images/usaflag.png" alt="flagUSA"
+                onclick="chooseCountry('use')">
+            </div>
+          </a>
+        </div>
+        <div class="rightButtonsDiv flex items-center gap-[15px] hidden xl:flex">
+          <a class="px-[24px] py-[9px] text-white bg-gradient-to-r from-[#742CE3] 
+          to-[#E1ADCB]" href="#">
+            Qiymət Təklifi Al
+          </a>
+          <button class="px-[24px] py-[9px] text-[#A271F2] border-[#A271F2]">
+            Daxil olun
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+  <script src="navdata.js"></script>
+  <script src="hideorshowdrop.js"></script>
+  <script src="flagcurrencyfunctions.js"></script>
+  <script src="hamburgerfunc.js"></script>
+  <script src="sideData.js"></script>
 </body>
 
 </html>
