@@ -52,7 +52,7 @@ currency1.onclick = function () {
     currencyDrop1.style.display = "none"
   }
 }
-function chooseCurrency(value) {
+function chooseCurrency1(value) {
   manato1.innerHTML = value.innerHTML
 }
 country1.onclick = function () {
@@ -63,7 +63,7 @@ country1.onclick = function () {
     flagDrop1.style.display = "none"
   }
 }
-function chooseCountry(value) {
+function chooseCountry1(value) {
   if (value == "use1") {
     use1.style.display = "block"
     aze1.style.display = "none"
